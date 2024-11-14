@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHARTISTRY - Profil Perusahaan</title>
+    <style>
+        /* Style umum */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #a5a5c9;
+        }
+
+        /* Style untuk bagian header / sampul profil */
+        .header {
+            background-image: url('header[1].png'); /* Ganti dengan URL gambar sampul */
+            padding: 180px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Style untuk navigasi */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        /* Style untuk profil perusahaan */
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -50px;
+        }
+
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 10px;
+        }
+
+        .profile h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile p {
+            color: #666;
+            font-size: 16px;
+            text-align: center;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* Style untuk tombol kontak */
+        .contact-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style untuk bagian konten */
+        .content {
+            display: none;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        /* Style untuk produk */
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product-item {
+            width: 250px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-item h3 {
+            font-size: 20px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product-item p {
+            color: #666;
+            padding: 0 10px;
+        }
+
+        /* Style untuk kontak */
+        .contact-info {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .contact-info li {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+    <script>
+        function showContent(section) {
+            var sections = document.querySelectorAll('.content');
+            sections.forEach(function(sec) {
+                sec.classList.remove('active');
+            });
+            document.getElementById(section).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Bagian Header / Sampul Profil -->
+    <div class="header">
+        <h1></h1>
+    </div>
+
+    <!-- Navigasi -->
+    <div class="navbar">
+        <a href="#home" onclick="showContent('home')">Beranda</a>
+        <a href="#profile" onclick="showContent('profile')">Profil</a>
+        <a href="#products" onclick="showContent('products')">Produk</a>
+        <a href="#contact" onclick="showContent('contact')">Kontak</a>
+    </div>
+
+    <!-- Bagian Konten Beranda -->
+    <div id="home" class="content active">
+        <h2>Selamat Datang di TECHARTISTRY</h2>
+        <p>TECHARTISTRY menghadirkan solusi kreatif dan inovatif untuk kebutuhan teknologi modern.
+            Jelajahi lebih lanjut untuk mengetahui produk dan layanan kami.Techartistry bergerak di
+            bidang desain grafis dengan layanan utama mencakup desain kartu nama, logo, dan banner menggunakan Canva.
+            Proses bisnis utamanya adalah menerima pesanan dari klien, memahami kebutuhan desain mereka, membuat draft desain
+            menggunakan Canva, dan memberikan hasil akhir yang sesuai dengan permintaan klien. Techartistry juga berencana
+            menawarkan jasa pelatihan Canva bagi pengguna yang ingin belajar membuat desain sendiri.</p>
+    </div>
+
+    <!-- Bagian Konten Profil -->
+    <div id="profile" class="content">
+        <div class="profile">
+            <img src="logotec.png" alt="Logo Perusahaan"> <!-- Ganti dengan URL logo perusahaan -->
+            <h2>TECHARTISTRY</h2>
+            <p>TECHARTISTRY adalah perusahaan yang bergerak di bidang teknologi dan seni, menghadirkan solusi kreatif dan inovatif untuk kebutuhan teknologi modern.</p>
+        </div>
+    </div>
+
+    <!-- Bagian Konten Produk -->
+    <div id="products" class="content">
+        <h2>Produk Kami</h2>
+        <p>Kami menawarkan berbagai produk teknologi inovatif untuk membantu Anda mencapai tujuan bisnis Anda.</p>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="logo1.png" alt="Produk 1"> <!-- Ganti dengan URL gambar produk -->
+                <h3>Produk 1</h3>
+                <p>Logo Makanan</p>
+            </div>
+            <div class="product-item">
+                <img src="logo2.png" alt="Produk 2"> <!-- Ganti dengan URL gambar produk -->
+                <h3>Produk 2</h3>
+                <p>Logo shop sederhana</p>
+            </div>
+            <div class="product-item">
+                <img src="logo3.png" alt="Produk 3"> <!-- Ganti dengan URL gambar produk -->
+                <h3>Produk 3</h3>
+                <p>Logo elektronik</p>
+            </div>
+            <div class="product-item">
+                <img src="kartu nama produk (1).png" alt="Produk 4"> <!-- Ganti dengan URL gambar produk -->
+                <h3>Produk 4</h3>
+                <p>Kartu nama</p>
+            </div>
+            <div class="product-item">
+                <img src="produk benner (1).png" alt="Produk 5"> <!-- Ganti dengan URL gambar produk -->
+                <h3>Produk 5</h3>
+                <p>Benner usaha makanan </p>
+            </div>
+            <div class="product-item">
+                <img src="kartu nama produk.png" alt="Produk 6"> <!-- Ganti dengan URL gambar produk -->
+                <h3>Produk 6</h3>
+                <p>kartu nama</p>
+            </div>
+            <div class="product-item">
+                <img src="produk benner5.png " alt="Produk 7"> <!-- Ganti dengan URL gambar produk -->
+                <h3>Produk 7</h3>
+                <p>Benner penerimaan sekolah</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bagian Konten Kontak -->
+    <div id="contact" class="content">
+        <h2>Hubungi Kami</h2>
+        <p>Untuk informasi lebih lanjut, silakan hubungi kami melalui email, telepon, atau media sosial.</p>
+        <ul class="contact-info">
+            <li><strong>Email:</strong> <a href="techartisty@gmail.com">techartisty@gmail.com</a></li>
+            <li><strong>No. HP:</strong> <a href="tel:+62-8310-2619-842">+62-8310-2619-842</a></li>
+            <li><strong>Instagram:</strong> <a href="https://instagram.com/techartistry" target="_blank">@techartistry</a></li>
+        </ul>
+        <a href="techartisty@gmail.com" class="contact-button">Hubungi Kami</a>
+    </div>
+
+</body>
+</html>
