@@ -1,0 +1,149 @@
+/* Style umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a5a5c9;
+}
+
+/* Style untuk bagian header / sampul profil */
+.header {
+    background-image: url('header[1].png'); /* Ganti dengan URL gambar sampul */
+    padding: 180px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1 {
+    font-size: 48px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Style untuk navigasi */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* Style untuk profil perusahaan */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 10px;
+}
+
+.profile h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.profile p {
+    color: #666;
+    font-size: 16px;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* Style untuk tombol kontak */
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+/* Style untuk bagian konten */
+.content {
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
+
+.content.active {
+    display: block;
+}
+
+/* Style untuk produk */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-item {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.product-item p {
+    color: #666;
+    padding: 0 10px;
+}
+
+/* Style untuk kontak */
+.contact-info {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.contact-info li {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
